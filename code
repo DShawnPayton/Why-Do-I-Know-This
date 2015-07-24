@@ -1,0 +1,286 @@
+__author__ = 'DShawn Payton'
+from sys import argv
+import os
+os.system("say 'Welcome to the test that I like to call, Why do I know This?' ")
+script, user_name = argv
+# here are the various smart alec prompts for responses.
+prompt = 'What Do you think?------Type the letter of your answer:  '
+prompt2 = "It's up to you. I have no idea.------Type the letter of your answer:  "
+prompt3 = 'Hell if I know. All yours, buddy.------Type the letter of your answer: '
+prompt4 = 'I know, but I wont tellll....------Type the letter of your answer: '
+prompt5 = 'Might as well guess...------Type the letter of your answer: '
+prompt6 = 'Type yes or no...: '
+prompt7 = 'I have no idea at all, buddy. Your call------Type the letter of your answer: '
+os.system("say ' This test will be full of information that has no other use, but to win at this game!'")
+os.system("say ' So, are you ready to play?'")
+# Intro and first "question"
+print """
+Hello, %s, and welcome to the Why Do I Know This??!? Test!
+This test will be full of information that has no other use, but to win at this game!
+So, are you ready to play?
+""" % user_name
+ready = raw_input(prompt6)
+
+if ready == 'yes':
+    print 'Okay, %s, here we go! Just type in the letter of the choice you want!' % user_name
+    os.system("say  'Alright, Here We go! Type the letter of the answer you want to pick!'")
+if ready == 'no':
+    os.system("say ' Okay, but are you sure? you might like it!' ")
+    print 'Okay, but are you sure? You just might like it, %s!' % user_name
+    ready = raw_input(prompt6)
+    if ready == 'no':
+        os.system("say 'I get the point. Bye Bye.'")
+        print 'I get the point. bye bye, %s.' % user_name
+        exit()
+os.system("say ' Okay, here is the first question.' ")
+print """
+Okay, %s, here's question one.
+What was the name of the
+character in the  movie
+'The Matrix'
+who said the line,
+'Not like this'?
+\ta. Cypher
+\tb. Trinity
+\tc. Switch
+\td. Morpheus
+\te. Neo
+""" % user_name
+firstAnswer = raw_input(prompt)
+
+if firstAnswer == 'c':
+    a = 10
+    print 'Correct! You are right! Now show me your winners dance, %s!' % user_name
+    os.system("say 'Correct! You are right!' ")
+else:
+    print 'Sorry, %s, wrong answer.' % user_name
+    os.system("say 'Sorry, Wrong Answer!'")
+    a = 2
+
+# Second Question
+os.system("say 'Okay, Next Question!' ")
+print """
+Okay, %s, next question.
+Who won on the Screw Attack!
+Death Battle between
+Captain America and Batman?
+\ta. Captain America
+\tb. Batman
+""" % user_name
+secondAnswer = raw_input(prompt2)
+
+if secondAnswer == 'b':
+    b = 10
+    print 'You are right, %s! Cap was good, but you know Bats will be prepared for anything!' % user_name
+    os.system("say 'Yes! You are right! Captain America is good, but Bat Man is prepared for anything!'")
+else:
+    print 'Nope, incorrect.'
+    os.system("say 'Nope. Incorrect! Google Death Battle on You Tube and search for this battle. Watch it!'")
+    b = 1
+
+# Third Question
+os.system("say 'Question Number 3'")
+print """
+Question number 3, %s.
+What is a Hadoken?
+\ta. A 1800's era hat for farmers
+\tb. A type of dog bred in South East Asia
+\tc. An energy blast featured in the Street Fighter video games
+\td. Slang for a cheating husband in Pig Latin
+\te. None of the Above
+""" % user_name
+thirdAnswer = raw_input(prompt5)
+
+if thirdAnswer == 'c':
+    c = 10
+    print 'Yes! One of my favorite video games series of all time! Good Job, %s!' % user_name
+    os.system("say 'You are right! One of my favorite video game series!'")
+else:
+    print 'Sorry, %s, but unfortunately, you are wrong.' % user_name
+    os.system("say 'Wow! You are wrong! '")
+    c = 3
+
+# fourth question
+os.system("say 'Alrighty then, Question number four!'")
+print """
+Alrighty then, %s! Question number four.
+What is the name comedy alien movie
+with the voice talents of Seth Rogen?
+\ta. Alf
+\tb. E.T.
+\tc. Paul
+\td. Ted
+\te. Chappy
+""" % user_name
+
+fourthAnswer = raw_input(prompt3)
+if fourthAnswer == 'c':
+    d = 10
+    print 'Yes! %s, you are correct! I enjoyed that movie, very funny!' % user_name
+    os.system("say 'Yes!!! I enjoyed that movie. Very funny!' ")
+else:
+    print 'Dang it! Wrong answer, %s.' % user_name
+    os.system("say 'Dang it! Wrong Answer! '")
+    d = 3
+
+# fifth question
+os.system("say 'Moving right along, here is the next question,'")
+print """
+Moving right along, Here is the next question.
+What is money?
+\ta. The root of all evil for some people
+\tb. A major help right now to plenty of people
+\tc. Anything we say it is
+\td. All of the above
+"""
+
+fifthAnswer = raw_input(prompt4)
+if fifthAnswer == 'd':
+    e = 10
+    print 'Exactly right, %s!' % user_name
+    os.system("say 'Exactly right! Money is what you make of it, not good or evil.'")
+else:
+    print 'Nope, although it is kind of a trick question. Gonna give you some points anyway, %s.' % user_name
+    os.system("say 'Nope, but it is a trick question. So you get a few points anyway.'")
+    e = 3
+
+# Sixth Question
+os.system("say 'Cool, Let us keep going.'")
+print """ Cool, %s, let's keep going.
+Who was the actress who played
+Frida Kahlo in the movie, 'Frida'?
+\ta. Penelope Cruz
+\tb. Salma Hayek
+\tc. Julia Roberts
+\td. Monica Belucci
+\te. Catherine Zeta Jones
+""" % user_name
+
+sixthAnswer = raw_input(prompt5)
+if sixthAnswer == 'b':
+    f = 10
+    print 'Great Job, %s! you are correct! And she was beautiful and excellent as the award winning artist!' % user_name
+    os.system("say 'Great job, You are correct! Salma Hayek is so beautiful!'")
+else:
+    print 'No, %s. Incorrect. Sad face :(' % user_name
+    os.system("say 'No, You are incorrect. When you get a chance, Google that movie and watch it. Very good movie.'")
+    f = 1
+
+# Seventh Question
+os.system("say 'Here comes a hard one! You can do it!'")
+print """
+Here comes a hard one, %s.
+What is the Voynich Manuscript?
+\ta. A players manual for the video game Far Cry
+\tb. Plato's diary during his trip to India
+\tc. A short story by Mark Twain
+\td. An untranslatable book that is full of pictures of plants we say do no not exist
+\te. The name of 2Pac's last album
+""" % user_name
+
+seventhQuestion = raw_input(prompt2)
+if seventhQuestion == 'd':
+    g = 10
+    print 'Yes, you are right, %s! We still do not know what the book means. Very strange and interesting!' % user_name
+    os.system("say 'Yes, You are right! Very Strange and interesting book!'")
+else:
+    print 'No, %s, You are wrong.' % user_name
+    os.system("say 'No, you are so wrong.'")
+    g = 2
+
+# Eighth Question
+os.system("say 'Well, here is another question.'")
+print """
+Well, well, well, %s, here is another question.
+What is the Large Hadron Collider?
+\ta. a particle accelerator located at CERN
+\tb. A NASA Probe Satellite headed toward Jupiter
+\tc. An adult toy used in Hardcore XXX films
+\td. A ride at Six Flags over Amsterdam
+""" % user_name
+eighthQuestion = raw_input(prompt)
+
+if eighthQuestion == 'a':
+    h = 10
+    print 'You are right, %s! Some say it might help us form universes! Who knows, but you get 10 points!' % user_name
+    os.system("say 'You are right! It might help us understand the universe more, or even form new ones!'")
+else:
+    print 'Dang it, %s. Wrong answer.' % user_name
+    os.system("say 'Wrong. Wrong. Wrong!!!'")
+    h = 1
+
+# Ninth Question
+os.system("say 'We are getting close to the end. Next Question'")
+print """ We're getting close to the end, %s.
+Here is another question.
+Who is the current host of the show 'Cosmos'?
+\ta. Bill Nye The Science Guy
+\tb. Carl Sagan
+\tc. Neil deGrasse Tyson
+\td. Sarah Silverman
+\te. Thomas Wayne
+""" % user_name
+ninthAnswer = raw_input(prompt3)
+
+if ninthAnswer == 'c':
+    i = 10
+    print 'Excellent, %s! You are right!' % user_name
+    os.system("say 'Excellent! You are right! Mister Tyson took over for the late great Carl Sagan.'")
+else:
+    print 'Incorrect, %s.' % user_name
+    os.system("say 'Incorrect! You Suck Again!!'")
+    i = 2
+
+# Tenth Question
+os.system("say 'Alright, last question. But it is a trick!'")
+print """Alright, %s, last question.
+It is actually a trick.
+Think of a number. Don't type it, just think of it.
+Now, double that number.
+Did it?
+Good. Now add ten to that.
+Ok, now divide what you have now by 2.
+Finally, subtract the first number you were thinking of from this.
+What number do you have right now?
+\ta. 30
+\tb. 5
+\tc. what?! I ain't doin no math!
+\td. 1999
+""" % user_name
+tenthQuestion = raw_input(prompt7)
+
+if tenthQuestion == 'b':
+    j = 10
+    print 'Yes! You are right, %s! Good Job!' % user_name
+    os.system("say 'Yes! You are right! It is a math trick I learned in the 5th grade.'")
+else:
+    print 'No, %s, but since that was another trick question, I will give you points anyway.' % user_name
+    os.system("say 'No, but since it was a trick you get some points anyway.'")
+    j = 6
+
+os.system("say 'Thank you for playing the first installment of Why do I know This?!'")
+os.system("say 'I hope you enjoyed it, along with my sexy voice and witty, informative banter.'")
+print """
+Thank you, %s, for playing the
+first installment of
+Why Do I Know This?
+Hope you enjoyed it!
+See you next time!
+""" % user_name
+score = a + b + c + d + e + f + g + h + i + j
+os.system("say 'Okay, your score is'"), score
+print 'Okay, your score is', score
+if score == 65:
+    print 'Well, %s. You just passed. Try again to get better at useless information!' % user_name
+    os.system("say 'Well, you just passed. Try again!'")
+if score == 100:
+    print 'Wow, %s! Perfect score! You are pretty good at retaining useless information, like me!' % user_name
+    os.system("say 'Wow, You got a perfect score! You are excellent at remembering cool, yet useless information!'")
+if 80 < score < 100:
+    print 'Good job, %s. Try again to get a higher score!' % user_name
+    os.system("say 'Good job. Try again to get a higher score!'")
+if score < 40:
+    print 'Yikes, %s! Might want to practice on your useless information skills!' % user_name
+    os.system("say 'Yikes! You might want to try again!'")
+    print 'Tell you what, %s, go on and try again, see if you can get a better score.' % user_name
+    os.system("say 'Even though you may have sucked at this test, I still love you.'")
